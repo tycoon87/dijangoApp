@@ -13,8 +13,11 @@ def create (request):
     return render(redirect,'/')
 
 def show (request, Blog_id):
-    Blog_id = Blog_id
-    return request ('Blogapp/new.html',Blog_id)
+    contents = {
+        'id':Blog_id
+    }
+    print 
+    return render(request,'Blogapp/new.html', contents)
 
 def editblog (request, Blog_id):
     return redirect('/')
